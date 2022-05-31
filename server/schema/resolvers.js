@@ -1,5 +1,4 @@
-const { Constant } = require('../models');
-const { User } = require('../../models');
+const { User } = require('../models');
 
 const resolvers = {
     Query: {
