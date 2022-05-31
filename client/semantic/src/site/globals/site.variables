@@ -2,18 +2,18 @@
      User Global Variables
 *******************************/
 
-@primaryColor   : @pink;
-@secondaryColor : @grey;
-@red            : #DB2828;
-@orange         : #FE9A76;
-@yellow         : #FFD700;
-@olive          : #32CD32;
-@green          : #016936;
-@teal           : #008080;
-@blue           : #0E6EB8;
-@violet         : #EE82EE;
-@purple         : #B413EC;
-@pink           : #FF1493;
-@brown          : #A52A2A;
-@grey           : #A0A0A0;
-@black          : #000000;
+@primaryColor   : @grey; 
+@secondaryColor : @green; 
+@red            : #E54A38;
+@orange         : #EF8339;
+@yellow         : #F9BC39;
+@olive          : #6A814F;
+@green          : #456535;
+@teal           : #89B6A5;
+@blue           : #09445D;
+@violet         : #893168;
+@purple         : #523249;
+@pink           : #FF47DA;
+@brown          : #9C6A40;
+@grey           : #CBB694;
+@black          : #020E13;
