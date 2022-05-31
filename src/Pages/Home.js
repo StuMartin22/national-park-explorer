@@ -24,9 +24,9 @@ const SearchParks = () => {
       if (!searchInput) {
         return false;
       }
-  
+  //search API, vs google!!
       try {
-        const response = await searchGoogleParks(searchInput);
+        const response = await searchAPIParks(searchInput);
   
         if (!response.ok) {
           throw new Error('something went wrong!');
@@ -37,7 +37,7 @@ const SearchParks = () => {
         const parkData = items.map((park) => ({
           parkId: park.id,
           parkName: park.name,
-          image: park.volumeInfo.imageLinks?.thumbnail || '',
+          image: park.image
         }));
   
         setSearchedparks(parkData);
