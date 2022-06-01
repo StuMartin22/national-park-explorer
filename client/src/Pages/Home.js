@@ -6,25 +6,16 @@
 // import { render } from "react-dom/cjs/react-dom.production.min";
 
 // import 
-// const Home = () => {
+const Home = () => {
 //   const { loading, data } = useQuery(QUERY_MATCHUPS, {
 //     fetchPolicy: "no-cache"
 //   });
 
 //   const matchupList = data?.matchups || [];
 
-//   return (
-//     YOYOYOOYOYO
-//   );
-// };
+  return (
+    <h1>test</h1>
+  );
+};
 
-
-// const Home = 
-//     render () {
-//         return (
-//             YOYOYOOY
-//         );
-//         };
-
-
-// export default Home;
+export default Home;
