@@ -23,14 +23,22 @@ import "./App.css";
 // import BoardUser from "./components/board-user.component";
 // import BoardModerator from "./components/board-moderator.component";
 // import BoardAdmin from "./components/board-admin.component";
-class App extends Component {
+// class App extends Component {
    
+//   render() {
+//     return (    
+//         <div>
+//           {/* <h1>Welcome to ya mom!</h1> */}
+//           < Home />
+//         </div>
+//     );
+//   }
+// }
+
+class App extends Component {
   render() {
-    return (    
-        <div>
-          {/* <h1>Welcome to ya mom!</h1> */}
-          < Home />
-        </div>
+    return (
+<h1>test</h1>
     );
   }
 }
