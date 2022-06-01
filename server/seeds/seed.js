@@ -1,13 +1,17 @@
 const db = require('../config/connection');
-const { Constant } = require('../models');
+const { User } = require('../models');
 
 const data = require('./data.json');
 
 db.once('open', async () => {
-  await Constant.deleteMany({});
-
-  const whatOurStuffIs = await Constant.insertMany(data);
+  try {
+  await User.deleteMany({});
+  const User = await User.insertMany(data);
 
   console.log('data added!');
   process.exit(0);
+  }
+  catch (err) {
+    throw err;
+  }
 });
