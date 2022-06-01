@@ -1,33 +1,38 @@
 import React, {SyntheticEvent, useState} from 'react';
 import {Redirect} from "react-router-dom";
 
-const Login = (props: { setName: (name: string) => void }) => {
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [redirect, setRedirect] = useState(false);
+const Login = (props) => {
+    const [formState, setFormState] = useState({email:'', password: '' });
+    const [login, {error, data}]= useMutation(LOGIN_USER);
 
-    const submit = async (e: SyntheticEvent) => {
-        e.preventDefault();
+    const handleChange =(event) => {
+      const{name, value} = event.target;
 
-        const response = await fetch('http://localhost:8000/api/login', {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            credentials: 'include',
-            body: JSON.stringify({
-                email,
-                password
-            })
-        });
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
+  };
 
-        const content = await response.json();
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+    try {
+      const { data } = await login({
+        variables: { ...formState },
+      });
 
-        setRedirect(true);
-        props.setName(content.name);
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
     }
 
-    if (redirect) {
-        return <Redirect to="/"/>;
-    }
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
+  };
 
     return (
         <form onSubmit={submit}>
