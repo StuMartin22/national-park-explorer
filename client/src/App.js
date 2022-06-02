@@ -1,4 +1,5 @@
 import React from 'react';
+// import { MemoryRouter, Switch, Route } from 'react-router-dom';
 import {
   ApolloClient,
   InMemoryCache,
@@ -6,18 +7,68 @@ import {
   createHttpLink,
 } from '@apollo/client';
 import { setContext } from '@apollo/client/link/context';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-
-import Home from './pages/Home';
-
-import Signup from './pages/Signup';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// import HomePage from './Pages/Home';
+// import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
+// import Container from 'react-bootstrap/Container';
+// import Button from 'react-bootstrap/Button';
+// import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
+// import { LinkContainer } from 'react-router-bootstrap';
+// import Signup from './pages/Signup';
 import Login from './pages/Login';
-import Header from './components/Header';
+// import Header from './components/Header';
 // import Footer from './components/Footer';
+// import 'bootstrap/dist/css/bootstrap.min.css'
+import HomePage from './pages/Home'
 
-import Search from './components/searchbar';
 
+// function App() {
+//     return (
+//         <div>
+//             <HomePage/>
+//         </div>
+//         );
+//     }
+// };
+    // <MemoryRouter>
+    //   <Container className="p-3">
+    //     <Container className="p-5 mb-4 bg-light rounded-3">
+    //       <h1 className="header">Welcome To React-Bootstrap</h1>
+    //       <h2>
+    //         Current Page is{' '}
+    //         <Switch>
+    //           <Route path="/about">
+    //             <About />
+    //           </Route>
+    //           <Route path="/users">
+    //             <Users />
+    //           </Route>
+    //           <Route path="/">
+    //             <Home />
+    //           </Route>
+    //         </Switch>
+    //       </h2>
+    //       <h2>
+    //         Navigate to{' '}
+    //         <ButtonToolbar className="custom-btn-toolbar">
+    //           <LinkContainer to="/">
+    //             <Button>Home</Button>
+    //           </LinkContainer>
+    //           <LinkContainer to="/about">
+    //             <Button>About</Button>
+    //           </LinkContainer>
+    //           <LinkContainer to="/users">
+    //             <Button>Users</Button>
+    //           </LinkContainer>
+    //         </ButtonToolbar>
+    //       </h2>
+    //     </Container>
+    //   </Container>
+    // </MemoryRouter>
+//   );
 
+export default App;
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -43,30 +94,31 @@ const client = new ApolloClient({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <BrowserRouter>
-        <div className="flex-column justify-flex-start min-100-vh">
+      <Router>
+        {/* <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container">
+          <div className="container"> */}
             <Routes>
-              {/* <Route 
+              <Route 
                 path="/" 
-                element={<Home />}
-              /> */}
+                element={<HomePage />}
+              />
               <Route 
                 path="/login" 
                 element={<Login />}
               />
-              <Route 
+              {/* <Route 
                 path="/signup" 
                 element={<Signup />}
-              />
+              /> */}
             </Routes>
-          </div>
-          {/* <Footer /> */}
-        </div>
-      </BrowserRouter>
-    </ApolloProvider>
+          {/* </div>
+          <Footer />
+        </div> */}
+      </Router>
+    </ApolloProvider> 
   );
 }
+      
+// export default App;
 
-export default App;
