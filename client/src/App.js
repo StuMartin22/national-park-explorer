@@ -9,10 +9,10 @@ import React from 'react';
 // import { setContext } from '@apollo/client/link/context';
 // import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import HomePage from './Pages/Home';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.scss'
 // import Container from 'react-bootstrap/Container';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 // import { LinkContainer } from 'react-router-bootstrap';
 // import Signup from './pages/Signup';
