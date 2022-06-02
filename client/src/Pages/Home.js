@@ -146,3 +146,12 @@
 // };
 
 // export default Searchparks;
+import Button from 'react-bootstrap/Button'
+const HomePage = () => { return (
+<> 
+<Button>Test</Button>
+</>
+)
+};
+
+export default HomePage;
