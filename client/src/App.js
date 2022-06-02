@@ -16,21 +16,12 @@ import './App.css'
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 // import { LinkContainer } from 'react-router-bootstrap';
 // import Signup from './pages/Signup';
-import Login from './pages/Login';
+import Login from './Pages/Login';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import HomePage from './pages/Home'
+import HomePage from './Pages/Home'
 
-
-// function App() {
-//     return (
-//         <div>
-//             <HomePage/>
-//         </div>
-//         );
-//     }
-// };
     // <MemoryRouter>
     //   <Container className="p-3">
     //     <Container className="p-5 mb-4 bg-light rounded-3">
