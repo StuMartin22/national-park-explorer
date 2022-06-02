@@ -4,15 +4,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import ReactDOM from "react-dom/client";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+  </React.StrictMode>
 );
-
-
 
 reportWebVitals();
