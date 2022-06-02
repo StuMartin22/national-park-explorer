@@ -18,11 +18,11 @@ const typeDefs = gql`
         ratings: [Rating]!
     }
 
-    // type Rating {
-    //     _id: ID
-    //     ratingNumber: Int
-    //     ratingAuthor: String
-    // }
+    type Rating {
+        _id: ID
+        ratingNumber: Int
+        ratingAuthor: String
+    }
 
     type Auth {
         token: ID!
