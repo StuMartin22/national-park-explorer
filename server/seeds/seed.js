@@ -6,7 +6,7 @@ const data = require('./data.json');
 db.once('open', async () => {
   try {
   await User.deleteMany({});
-  const User = await User.insertMany(data);
+  await User.insertMany(data);
 
   console.log('data added!');
   process.exit(0);
