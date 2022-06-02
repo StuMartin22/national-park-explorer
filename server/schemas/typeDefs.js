@@ -39,13 +39,6 @@ const typeDefs = gql`
         addUser(username: String!, email: String!, password: String!): Auth
         removeUser: User
         login(email: String!, password: String!): Auth
-<<<<<<< HEAD
-        addComment(commentText: String!, commentAuthor: String!, parkCode: String!): Comment
-        removeComment(commentId: ID!): Comment
-        addRating(commentId: ID!, ratingNumber: Int!, ratingAuthor: String!): Comment
-        removeRating(commentId: ID!, ratingId: ID!): Comment
-  }`;
-=======
 
         addComment(commentText: String!, commentAuthor: String!, parkCode: String!): Comment
         removeComment(commentId: ID!): Comment
@@ -53,6 +46,5 @@ const typeDefs = gql`
         addRating(commentId: ID!, ratingNumber: Int!, ratingAuthor: String!): Comment
         removeRating(commentId: ID!, ratingId: ID!): Comment
     }`;
->>>>>>> main
 
 module.exports = typeDefs;
