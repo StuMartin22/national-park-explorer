@@ -1,4 +1,5 @@
 const { User, Comment } = require('../models');
+const { AuthenticationError } = require('apollo-server-express')
 const { signToken } = require('../utils/auth');
 
 // 
@@ -14,7 +15,7 @@ const resolvers = {
           const params = parkCode ? { parkCode } : {};
           return await Comment.find(params);
         },
-        comment: async (parent, { commentID }) => {
+        comment: async (parent, { commentId }) => {
           return Comment.findOne({ _id: commentId });
         }
     },
@@ -27,13 +28,13 @@ const resolvers = {
             return { token, user };
         },
         login: async (parent, { email, password }) => {
-            const user = await user.findOne({ email });
+            const user = await User.findOne({ email });
       
             if (!user) {
               throw new AuthenticationError('No user with this email found!');
             }
       
-            const correctPw = await user.isCorrectPassword(password);
+            const correctPw = await User.isCorrectPassword(password);
       
             if (!correctPw) {
               throw new AuthenticationError('Incorrect password!');
