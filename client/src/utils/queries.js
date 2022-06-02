@@ -1,31 +1,60 @@
 import { gql } from '@apollo/client';
 
-export const QUERY_PARK = gql`
-  query allParks {
-   park {
+export const QUERY_USERS = gql`
+  query allUsers {
+    users {
       _id
-      name
-      description
+      username
+      email
+      comments {
+        _id
+        commentText
+      }
     }
   }
 `;
 
-// export const QUERY_SINGLE_PROFILE = gql`
-//   query singleProfile($profileId: ID!) {
-//     profile(profileId: $profileId) {
-//       _id
-//       name
-//       skills
-//     }
-//   }
-// `;
+export const QUERY_SINGLE_USER = gql`
+  query singleUser($userId: ID!) {
+    user(userId: $userId) {
+      _id
+      username
+      email
+      comments {
+        _id
+        commentText
+      }
+    }
+  }
+`;
 
-// export const QUERY_ME = gql`
-//   query me {
-//     me {
-//       _id
-//       name
-//       skills
-//     }
-//   }
-// `;
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      email
+      comments {
+        _id
+        commentText
+      }
+    }
+  }
+`;
+
+export const QUERY_PARK_COMMENTS = gql`
+  query parkComments($parkCode: String!) {
+    comments(parkCode: $parkCode) {
+      _id
+      commentText
+      commentAuthor
+      parkCode
+      createdAt
+      ratings {
+        _id
+        ratingNumber
+        ratingAuthor
+      }
+    }
+  }
+`;
