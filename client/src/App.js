@@ -71,7 +71,7 @@ import HomePage from './pages/Home'
 export default App;
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: '/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -81,7 +81,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : ''
     },
   };
 });
