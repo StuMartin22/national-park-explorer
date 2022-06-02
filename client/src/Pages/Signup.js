@@ -8,7 +8,7 @@ import Auth from '../utils/auth';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
-    name: '',
+    username: '',
     email: '',
     password: '',
   });
@@ -30,13 +30,14 @@ const Signup = () => {
     console.log(formState);
 
     try {
-      const { data } = await addUser({
+      const  data  = await addUser({
         variables: { ...formState },
       });
+      console.log(data);
 
-      Auth.login(data.addUser.token);
+      // Auth.login(data.addUser.token);
     } catch (e) {
-      console.error(e);
+      console.log(JSON.stringify(e, null, 2));
     }
   };
 
@@ -56,9 +57,9 @@ const Signup = () => {
                 <input
                   className="form-input"
                   placeholder="Your username"
-                  name="name"
+                  name="username"
                   type="text"
-                  value={formState.name}
+                  value={formState.username}
                   onChange={handleChange}
                 />
                 <input

@@ -13,6 +13,7 @@ const typeDefs = gql`
         _id: ID
         commentText: String
         commentAuthor: String
+        parkCode: String
         createdAt: String
         ratings: [Rating]!
     }
