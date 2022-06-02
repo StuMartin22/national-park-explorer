@@ -15,7 +15,7 @@ import './App.css'
 // import Button from 'react-bootstrap/Button';
 // import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 // import { LinkContainer } from 'react-router-bootstrap';
-// import Signup from './pages/Signup';
+import Signup from './pages/Signup';
 import Login from './pages/Login';
 // import Header from './components/Header';
 // import Footer from './components/Footer';
@@ -107,10 +107,10 @@ function App() {
                 path="/login" 
                 element={<Login />}
               />
-              {/* <Route 
+              <Route 
                 path="/signup" 
                 element={<Signup />}
-              /> */}
+              />
             </Routes>
           {/* </div>
           <Footer />
