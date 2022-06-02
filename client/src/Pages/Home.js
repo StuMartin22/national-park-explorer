@@ -147,11 +147,14 @@
 
 // export default Searchparks;
 import Button from 'react-bootstrap/Button'
+import '../App.scss'
+// function heythere (){
+//     return 'OhHey'
+// }
 const HomePage = () => { return (
-<> 
-<Button>Test</Button>
+<>
+<Button>testers</Button>
 </>
 )
 };
-
 export default HomePage;
