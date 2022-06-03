@@ -17,7 +17,7 @@ import './App.css'
 // import { LinkContainer } from 'react-router-bootstrap';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-// import Header from './components/Header';
+import Header from './components/Header';
 // import Footer from './components/Footer';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from './pages/Home'
@@ -95,9 +95,9 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        {/* <div className="flex-column justify-flex-start min-100-vh">
+        <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container"> */}
+          <div className="container">
             <Routes>
               <Route 
                 path="/" 
@@ -112,9 +112,9 @@ function App() {
                 element={<Signup />}
               />
             </Routes>
-          {/* </div>
-          <Footer />
-        </div> */}
+          </div>
+          {/* <Footer /> */}
+        </div>
       </Router>
     </ApolloProvider> 
   );

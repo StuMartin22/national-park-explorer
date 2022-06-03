@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import { Button, Navbar, Nav, Card, Container } from 'react-bootstrap';
 import Auth from '../../utils/auth';
 
 const Header = () => {
@@ -22,21 +22,32 @@ const Header = () => {
         <div>
           {Auth.loggedIn() ? (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/me">
-                View My Profile
-              </Link>
-              <button className="btn btn-lg btn-light m-2" onClick={logout}>
-                Logout
-              </button>
+            <Navbar className = "navHome" bg="light" expand="lg">
+              <Container>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="me-auto">
+                    <Nav.Link href="/home">Home</Nav.Link>
+                    <Nav.Link onClick={logout}>Logout</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
             </>
           ) : (
             <>
-              <Link className="btn btn-lg btn-primary m-2" to="/login">
-                Login
-              </Link>
-              <Link className="btn btn-lg btn-light m-2" to="/signup">
-                Signup
-              </Link>
+              <Navbar className = "navHome" bg="light" expand="lg">
+                <Container>
+                  <Navbar.Toggle aria-controls="basic-navbar-nav"/>
+                  <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="me-auto">
+                      <Nav.Link href="/home">Home</Nav.Link>
+                      <Nav.Link href="/login">Login</Nav.Link>
+                      <Nav.Link href="/signup">Sign-Up</Nav.Link>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
             </>
           )}
         </div>
