@@ -21,6 +21,7 @@ import Header from './components/Header';
 // import Footer from './components/Footer';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from './pages/Home'
+import Search from './pages/Search'
 
 
 // function App() {
@@ -100,7 +101,7 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
-                path="/" 
+                path="/home" 
                 element={<HomePage />}
               />
               <Route 
@@ -110,6 +111,10 @@ function App() {
               <Route 
                 path="/signup" 
                 element={<Signup />}
+              />
+               <Route 
+                path="/search" 
+                element={<Search />}
               />
             </Routes>
           </div>
