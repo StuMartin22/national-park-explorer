@@ -175,7 +175,7 @@ const HomePage = () => { return (
             <Card.Text>
                 Welcome to National Parks Explorer! Your next adventure awaits.
             </Card.Text>
-            <Button variant="primary">Go somewhere</Button>
+            <Button variant="primary" href="/signup">Go somewhere</Button>
           </Card.Body>
       </Card>
   </Container>
