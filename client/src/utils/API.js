@@ -1,5 +1,5 @@
 export const searchParks = (query) => {
-    return fetch(`developer.nps.gov/api/v1/parks?q=${query}&api_key=JffACTqv5cyiRP3324FtfrelMR4M3HjiBb7YgiWL`);
+    return fetch(`https://developer.nps.gov/api/v1/parks?q=${query}&api_key=JffACTqv5cyiRP3324FtfrelMR4M3HjiBb7YgiWL`);
 }
 
 // park name = "data[0].fullName"
