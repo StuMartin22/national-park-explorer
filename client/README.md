@@ -14,7 +14,7 @@
   # Description
  Elevator pitch: a one minute description of your application
 
-
+Looking for your next big adventure? Love touring around the country enjoying the great outdoors or finding a park near you? Look no further. Our website, National Park Explorer, allows you to search for your next national park destination. It also allows you to view comments posted to decide if that park is right for you. You can even leave a review of your own trip to advise others.
 
 Concept: What is your user story? What was your motivation for development?
 
