@@ -23,15 +23,6 @@ import Header from './components/Header';
 import HomePage from './pages/Home'
 import Search from './pages/Search'
 
-
-// function App() {
-//     return (
-//         <div>
-//             <HomePage/>
-//         </div>
-//         );
-//     }
-// };
     // <MemoryRouter>
     //   <Container className="p-3">
     //     <Container className="p-5 mb-4 bg-light rounded-3">
@@ -101,7 +92,7 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
-                path="/home" 
+                path="/" 
                 element={<HomePage />}
               />
               <Route 
