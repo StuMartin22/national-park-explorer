@@ -3,7 +3,7 @@ import { Button, Navbar, Nav, Card, Container, Form } from 'react-bootstrap';
 import CardHeader from 'react-bootstrap/esm/CardHeader';
 import '../App.scss';
 import searchbar from '../components/searchbar';
-import { searchParks } from '../utils/api.js';
+import { searchParks } from '../utils/API';
 import Auth from '../utils/auth'
 
 const Search = () => {
