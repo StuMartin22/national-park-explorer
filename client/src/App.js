@@ -17,10 +17,11 @@ import './App.css'
 // import { LinkContainer } from 'react-router-bootstrap';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
-// import Header from './components/Header';
+import Header from './components/Header';
 // import Footer from './components/Footer';
 // import 'bootstrap/dist/css/bootstrap.min.css'
-import HomePage from './Pages/Home'
+import HomePage from './pages/Home'
+import Search from './pages/Search'
 
     // <MemoryRouter>
     //   <Container className="p-3">
@@ -62,7 +63,7 @@ import HomePage from './Pages/Home'
 export default App;
 
 const httpLink = createHttpLink({
-  uri: '/graphql',
+  uri: '/graphql'
 });
 
 const authLink = setContext((_, { headers }) => {
@@ -72,7 +73,7 @@ const authLink = setContext((_, { headers }) => {
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : ''
     },
   };
 });
@@ -86,12 +87,12 @@ function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
-        {/* <div className="flex-column justify-flex-start min-100-vh">
+        <div className="flex-column justify-flex-start min-100-vh">
           <Header />
-          <div className="container"> */}
+          <div className="container">
             <Routes>
               <Route 
-                path="/" 
+                path="/home" 
                 element={<HomePage />}
               />
               <Route 
@@ -102,10 +103,14 @@ function App() {
                 path="/signup" 
                 element={<Signup />}
               />
+               <Route 
+                path="/search" 
+                element={<Search />}
+              />
             </Routes>
-          {/* </div>
-          <Footer />
-        </div> */}
+          </div>
+          {/* <Footer /> */}
+        </div>
       </Router>
     </ApolloProvider> 
   );
