@@ -92,7 +92,7 @@ function App() {
           <div className="container">
             <Routes>
               <Route 
-                path="/home" 
+                path="/" 
                 element={<HomePage />}
               />
               <Route 
