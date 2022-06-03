@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import "./searchbar/searchbar.css";
+// import "./Componets/searchbar/searchbar";
+// import SearchBar from "./Components/searchbar";
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"></link>
 
 
 function SearchBar({ placeholder, data }) {
