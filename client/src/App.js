@@ -105,7 +105,7 @@ function App() {
                 element={<HomePage />}
               />
               <Route 
-                path="/login" 
+                path="natl-parks-explorer.herokuapp.com/login" 
                 element={<Login />}
               />
               <Route 
