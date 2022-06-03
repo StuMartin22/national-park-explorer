@@ -11,7 +11,7 @@ import searchbar from '../components/searchbar';
 
 const Search = () => { return (
 <div className="homeBody">
-<Navbar className = "navHome" bg="light" expand="lg">
+{/* <Navbar className = "navHome" bg="light" expand="lg">
   <Container>
     <Navbar.Brand href="#home">National Parks Explorer</Navbar.Brand>
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -23,7 +23,7 @@ const Search = () => { return (
       </Nav>
     </Navbar.Collapse>
   </Container>
-</Navbar>
+</Navbar> */}
 <Container>
       <Card className="cardHome">
           <Card.Body>
