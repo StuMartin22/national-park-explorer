@@ -1,4 +1,5 @@
 import React from 'react';
+import { Navbar, Container } from 'react-bootstrap';
 import Nav from 'react-bootstrap/Nav';
 import Auth from '../../utils/auth';
 
@@ -8,51 +9,40 @@ const Footer = () => {
         Auth.logout();
     };
     return (
-        <div>
-            {Auth.loggedIn() ? (
+<div>
+          {Auth.loggedIn() ? (
             <>
-                <Nav className="justify-content-end" activeKey="/home">
-                    <Nav.Item>
-                        <Nav.Link href="/home">Home</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="#top">Back to Top</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="/contact">Contact Us!</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey={logout}>Logout</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="/search">Search</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-                </>
-            ) : (
-                <>
-                <Nav className="justify-content-end" activeKey="/home">
-                    <Nav.Item>
-                        <Nav.Link href="/home">Home</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="#top">Back to Top</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="/contact">Contact Us!</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey={logout}>Log-in</Nav.Link>
-                    </Nav.Item>
-                    <Nav.Item>
-                        <Nav.Link eventKey="/search">Sign-up</Nav.Link>
-                    </Nav.Item>
-                </Nav>
-                </>
-            )}
+            <Navbar className = "footer justify-content-end" bg="light" expand="sm" fixed="bottom">
+              <Container>
+                <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                  <Nav className="">
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/search">Search</Nav.Link>
+                    <Nav.Link onClick={logout}>Logout</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
+            </>
+          ) : (
+            <>
+              <Navbar className = "footer justify-content-end" bg="light" expand="sm">
+                <Container>
+                  <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
+                    <Nav className="">
+                      <Nav.Link href="/">Home</Nav.Link>
+                      <Nav.Link href="#top">Back to Top</Nav.Link>
+                      <Nav.Link href="/login">Login</Nav.Link>
+                      <Nav.Link href="/signup">Sign-Up</Nav.Link>
+                    </Nav>
+                  </Navbar.Collapse>
+                </Container>
+              </Navbar>
+            </>
+          )}
         </div>
-    )
-}
+    );
+};
 
 
 export default Footer;
