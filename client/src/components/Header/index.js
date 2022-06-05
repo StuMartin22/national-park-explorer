@@ -9,21 +9,21 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="header">
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
+    <header className="container flex-column justify-space-between-lg justify-center align-center text-center display-flex align-center">
+      <div>
         <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
+          <h1 style={{ fontSize: '3rem' }}>
             National Park Explorer
           </h1>
         </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
+        <p className = "headerPara" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
           Find your next destination
         </p>
-        <div>
+        <div className="navDiv">
           {Auth.loggedIn() ? (
             <>
             <Navbar className = "navHome" bg="light" expand="lg">
-              <Container>
+              {/* <Container> */}
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                   <Nav className="me-auto">
@@ -32,13 +32,13 @@ const Header = () => {
                     <Nav.Link onClick={logout}>Logout</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
-              </Container>
+              {/* </Container> */}
             </Navbar>
             </>
           ) : (
             <>
               <Navbar className = "navHome" bg="light" expand="lg">
-                <Container>
+                {/* <Container> */}
                   <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                   <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
@@ -48,7 +48,7 @@ const Header = () => {
                       <Nav.Link href="/signup">Sign-Up</Nav.Link>
                     </Nav>
                   </Navbar.Collapse>
-                </Container>
+                {/* </Container> */}
               </Navbar>
             </>
           )}

@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import date from 'date-and-time';
->>>>>>> main
 import { Button, Navbar, Nav, Card, Container } from 'react-bootstrap';
 // import CardHeader from 'react-bootstrap/esm/CardHeader';
 import '../App.scss';
@@ -11,8 +7,8 @@ import '../App.scss';
 
 const HomePage = () => { 
   return (
-<div className="homeBody">
-<Container>
+<div>
+  <Container className = "homeBody">
       <Card className="cardHome">
           <Card.Body>
             <Card.Title>
@@ -24,8 +20,8 @@ const HomePage = () => {
             <Button variant="primary" href="/signup">Go somewhere</Button>
           </Card.Body>
       </Card>
-  </Container>
-</div>
+    </Container>
+  </div>
 )
 };
 export default HomePage;

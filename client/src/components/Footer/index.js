@@ -12,7 +12,7 @@ const Footer = () => {
 <div>
           {Auth.loggedIn() ? (
             <>
-            <Navbar className = "footer justify-content-end" bg="light" expand="sm" fixed="bottom">
+            <Navbar className = "footer container justify-content-end" bg="light" expand="sm" fixed="bottom">
               <Container>
                 <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                   <Nav className="">
@@ -26,7 +26,7 @@ const Footer = () => {
             </>
           ) : (
             <>
-              <Navbar className = "footer justify-content-end" bg="light" expand="sm">
+              <Navbar className = "footer container justify-content-end" bg="light" expand="sm">
                 <Container>
                   <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="">

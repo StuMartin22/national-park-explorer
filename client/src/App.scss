@@ -31,26 +31,39 @@ brown: #9C6A40
 
 .cardHome{
   background-color: #CBB694;
+  margin-top: 0.5REM;
+  border-radius: 2rem;
+  border: 0.5rem solid #09445D;
 }
+
 .navHome{
     background-color: #456535 !important;
+    border-radius: 1.5rem;
+    min-width: 95vh;
+    border: .25rem solid black;
 }
-.homeBody{
-    background-color: #CBB694 !important;
-}
+
 .footer{
   background-color: #456535 !important;
-}
-
-.m-0{
-  background-color: #CBB694;
-}
-
-header{
-  background-color: #CBB694;
+  margin-top: 0.5rem;
+  border-radius: 2rem;
+  border: 0.25rem solid black
 }
 
 .btn btn-block btn-info{
   color: #661ef6;
 }
 
+.headerPara{
+font-size: '1.75rem';
+font-weight: '700';
+background-color: #CBB694;
+}
+
+header{
+  background-color: #CBB694;
+  border-radius: 2rem;
+  min-width: 95vw;
+  margin-top: 1vh;
+  border: 0.5rem solid black;
+}
