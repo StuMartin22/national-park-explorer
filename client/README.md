@@ -34,7 +34,7 @@ Eric:
 
 Elizabeth: Worked on front end along with Stuart, created the pages in the client side, general layout, and wrote this readme.
 
-Challanges we faced included working with react and following time constraints due to all of our react related setbacks.
+Challenges we faced included working with react and following time constraints due to all of our react related setbacks.
 
 Successes we had included working and collaborating well as a team and deploying app. 
 
@@ -42,7 +42,7 @@ Demo: Show your stuff!
 
 Directions for Future Development
 
-Directions for the future would be to sort the user input recipe cards alphabetically and adding a search function. Another idea would be to link pinterest for an easy to save function for recipe ideas. 
+Directions for the future would be to create a filter by location function and to show the distance from the user's computer to the national park. We would also like to add a share to social media option so other's could post their linked reviews to facebook, instagram, pinterest, etc.
 
 Links to the deployed application and the GitHub repository. Use the Guide to Deploy with Heroku and MySQL on The Full-Stack Blog if you need a reminder on how to deploy to Heroku.
 https://github.com/StuMartin22/national-park-explorer
