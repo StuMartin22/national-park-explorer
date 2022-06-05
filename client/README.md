@@ -26,11 +26,11 @@ Technologies we used included react, javascript, html, css, bootstrap, national 
 
 Roles were broken down as follows:
 
-Brady: Project Manager
+Brady: Project Manager, worked on backend functionality, setting up apollo client on backend to view schemas, assisted with API pull on front end for park data.
 
 Stuart: Worked on react / bootstrap implementation - debugging - team assistance - redirection / endpoints.
 
-Eric:
+Eric: 
 
 Elizabeth: Worked on front end along with Stuart, created the pages in the client side, general layout, and wrote this readme.
 
