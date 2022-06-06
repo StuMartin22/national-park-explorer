@@ -30,7 +30,7 @@ Brady: Project Manager, worked on backend functionality, setting up apollo clien
 
 Stuart: Worked on react / bootstrap implementation - debugging - team assistance - redirection / endpoints.
 
-Eric: 
+Eric: worked on backend functionality, setting up apollo client on backend to view schemas, API pull on front end for park data.
 
 Elizabeth: Worked on front end along with Stuart, created the pages in the client side, general layout, and wrote this readme.
 
