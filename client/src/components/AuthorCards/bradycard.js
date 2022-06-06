@@ -2,7 +2,7 @@ import React from "react";
 import { Card, Container } from 'react-bootstrap';
 import '../../App.scss'
 
-const bradyCard = () => { 
+const BradyCard = () => { 
     return (
   <div>
     <Container className = "authorContainer">
@@ -13,8 +13,9 @@ const bradyCard = () => {
               </Card.Title>
               <Card.Text className="authorText">
                 {/* <p>About Author</p> */}
-                <p className="authorEmail" emailto="Mavetz10@gmail.com">Email</p>
-                <p className="authorGithub" href="www.github.com/BMavetz">Github</p>
+                    <a className="authorEmail" href="mailto:Mavetz10@gmail.com">Email</a>
+                    <br></br>
+                    <a className="authorGithub" href="www.github.com/BMavetz">Github</a>
               </Card.Text>
             </Card.Body>
         </Card>
@@ -22,4 +23,4 @@ const bradyCard = () => {
     </div>
   )
   };
-  export default bradyCard;
+  export default BradyCard;
