@@ -9,7 +9,7 @@
   [License](#license)<br>
   [Questions](#questions)<br>
 
-![Screen Shot 2022-05-05 at 1 33 09 PM](https://user-images.githubusercontent.com/97856843/166995258-40923859-27d5-47c1-abf2-ee13fb7a0ca5.png)
+![Screen Shot 2022-05-05 at 1 33 09 PM](./public/images/National_parks_screenshot.JPG)
 
   # Description
  Elevator pitch: a one minute description of your application
