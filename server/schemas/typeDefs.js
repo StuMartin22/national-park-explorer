@@ -34,6 +34,7 @@ const typeDefs = gql`
         user(userId: ID!): User
         comments(parkCode: String): [Comment]
         comment(commentId: ID!): Comment
+        me: User
     }
 
     type Mutation {
@@ -41,7 +42,7 @@ const typeDefs = gql`
         removeUser: User
         login(email: String!, password: String!): Auth
 
-        addComment(commentText: String!, commentAuthor: String!, parkCode: String!): Comment
+        addComment(commentText: String!, parkCode: String!): Comment
         removeComment(commentId: ID!): Comment
 
         addRating(commentId: ID!, ratingNumber: Int!, ratingAuthor: String!): Comment

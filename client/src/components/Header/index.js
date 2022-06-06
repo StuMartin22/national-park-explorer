@@ -9,53 +9,56 @@ const Header = () => {
     Auth.logout();
   };
   return (
-    <header className="header">
-      <div className="container flex-column justify-space-between-lg justify-center align-center text-center">
-        <Link className="text-dark" to="/">
-          <h1 className="m-0" style={{ fontSize: '3rem' }}>
-            National Park Explorer
-          </h1>
-        </Link>
-        <p className="m-0" style={{ fontSize: '1.75rem', fontWeight: '700' }}>
-          Find your next destination
-        </p>
-        <div>
-          {Auth.loggedIn() ? (
-            <>
-            <Navbar className = "navHome" bg="light" expand="lg">
+    <div>
+        <div className="text-center">
+          <div className="topThing">
+            <Link className="text-dark topLink" to="/">
+              <h1>
+                National Park Explorer
+              </h1>
+            </Link>
+            <p className="headerPara">
+              Find your next destination
+            </p>
+          </div>
+          </div>
+      <div />
+      {/* <div className="navDiv"> */}
+        {Auth.loggedIn() ? (
+          <>
+            <Navbar className="navHome" bg="light" expand="sm">
               <Container>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
-                  <Nav className="me-auto">
+                  <Nav className="">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/search">Search</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
                     <Nav.Link onClick={logout}>Logout</Nav.Link>
                   </Nav>
                 </Navbar.Collapse>
               </Container>
             </Navbar>
-            </>
-          ) : (
-            <>
-              <Navbar className = "navHome" bg="light" expand="lg">
-                <Container>
-                  <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-                  <Navbar.Collapse id="basic-navbar-nav">
-                    <Nav className="me-auto">
-                      <Nav.Link href="/">Home</Nav.Link>
-                      <Nav.Link href="/search">Search</Nav.Link>
-                      <Nav.Link href="/login">Login</Nav.Link>
-                      <Nav.Link href="/signup">Sign-Up</Nav.Link>
-                    </Nav>
-                  </Navbar.Collapse>
-                </Container>
-              </Navbar>
-            </>
-          )}
-        </div>
+          </>
+        ) : (
+          <>
+            <Navbar className="navHome" bg="light" expand="sm">
+              <Container>
+                <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                <Navbar.Collapse id="basic-navbar-nav">
+                  <Nav className="">
+                    <Nav.Link href="/">Home</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
+                    <Nav.Link href="/signup">Sign-Up</Nav.Link>
+                  </Nav>
+                </Navbar.Collapse>
+              </Container>
+            </Navbar>
+          </>
+        )}
       </div>
-    </header>
-  );
-};
+    // </div>
+  )};
 
 export default Header;

@@ -26,12 +26,13 @@ export const ADD_USER = gql`
 // `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($commentText: String!) {
-    addComment(commentText: $commentText) {
+  mutation addComment($commentText: String!, $parkCode: String!) {
+    addComment(commentText: $commentText, parkCode: $parkCode) {
       _id
       commentText
       commentAuthor
       createdAt
+      parkCode
       ratings {
         _id
         ratingNumber
