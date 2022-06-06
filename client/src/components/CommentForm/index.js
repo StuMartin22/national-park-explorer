@@ -11,7 +11,7 @@ const CommentForm = () => {
 
     const {parkCode} = useParams();
     console.log(parkCode);
-
+    
     const [addComment, { error }] = useMutation(ADD_COMMENT)
 
   const handleFormSubmit = async (event) => {

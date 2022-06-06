@@ -20,7 +20,7 @@ const typeDefs = gql`
 
     type Rating {
         _id: ID
-        ratingNumber: Int
+        ratingNumber: Int,
         ratingAuthor: String
     }
 
@@ -42,11 +42,12 @@ const typeDefs = gql`
         removeUser: User
         login(email: String!, password: String!): Auth
 
-        addComment(commentText: String!, parkCode: String!): Comment
+        addComment(commentText: String!, commentAuthor: String!, parkCode: String!): Comment
         removeComment(commentId: ID!): Comment
 
-        addRating(commentId: ID!, ratingNumber: Int!, ratingAuthor: String!): Comment
+        addRating(commentId: ID!, ratingNumber: Int!, ratingAuthor:String!): Comment
         removeRating(commentId: ID!, ratingId: ID!): Comment
+
     }`;
 
 module.exports = typeDefs;
