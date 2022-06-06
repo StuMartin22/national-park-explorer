@@ -2,6 +2,10 @@ export const searchParks = (query) => {
     return fetch(`https://developer.nps.gov/api/v1/parks?q=${query}&api_key=JffACTqv5cyiRP3324FtfrelMR4M3HjiBb7YgiWL`);
 }
 
+export const selectedPark = (query) => {
+    return fetch(`https://developer.nps.gov/api/v1/parks?parkCode=${query}&api_key=KWlmncloCrk0oODfo9U4LgJmvIRhfgIW0YhugC6X`);
+}
+
 // park name = "data[0].fullName"
 // parkCode = "data[0].parkCode"
 // park state = "data[0].addresses[0].stateCode"  ex) WY

@@ -22,6 +22,7 @@ import Header from './components/Header';
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import HomePage from './pages/Home'
 import Search from './pages/Search'
+import Park from './pages/Park'
 
     // <MemoryRouter>
     //   <Container className="p-3">
@@ -107,6 +108,10 @@ function App() {
                 path="/search" 
                 element={<Search />}
               />
+              <Route
+                path = "/park/:parkCode"
+                element={<Park />}
+              />
             </Routes>
           </div>
           {/* <Footer /> */}
@@ -116,5 +121,4 @@ function App() {
   );
 }
       
-// export default App;
 

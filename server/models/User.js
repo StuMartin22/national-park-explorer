@@ -13,7 +13,7 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: true,
-        validate: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address'],
+        validate: [/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/, 'Please fill a valid email address']
     },
     password: {
         type: String,
@@ -23,7 +23,7 @@ const userSchema = new Schema({
     comments: [
       {
         type: Schema.Types.ObjectId,
-        ref: 'Comment',
+        ref: 'Comment'
       },
     ]
 });

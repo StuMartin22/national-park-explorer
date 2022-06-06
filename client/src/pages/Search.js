@@ -100,7 +100,7 @@ return (
                   <Card.Title>{park.name}</Card.Title>
                   <Card.Text>Description: {park.description}</Card.Text>
                   {Auth.loggedIn() && (
-                    <Button>
+                    <Button href={`/park/${park.code}`}>
                       See What people have to Say!
                     </Button>
                   )}
