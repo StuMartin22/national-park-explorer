@@ -17,7 +17,13 @@ const resolvers = {
         },
         comment: async (parent, { commentId }) => {
           return Comment.findOne({ _id: commentId });
-        }
+        },
+        me: async (parent, args, context) => {
+          if (context.user) {
+            return User.findOne({ _id: context.user._id }).populate('thoughts');
+          }
+          throw new AuthenticationError('You need to be logged in!');
+        },
     },
 
     Mutation: {
@@ -49,14 +55,22 @@ const resolvers = {
             }
             throw new AuthenticationError('You need to be logged in!');
           },
-        addComment: async (parent, { commentText, commentAuthor, parkCode }) => {
-          const comment = await Comment.create({ commentText, commentAuthor, parkCode });
+        addComment: async (parent, { commentText, parkCode }, context) => {
+          if (context.user){
+          const comment = await Comment.create({ 
+            commentText,
+            commentAuthor: context.user.username, 
+            parkCode,
+          });
 
           await User.findOneAndUpdate(
-            { username: commentAuthor },
+            { _id: context.user._id },
             { $addToSet: { comments: comment._id }}
           );
+          }
+          throw new AuthenticationError('You need to be logged in!');
         },
+
         removeComment: async (parent, { commentId }) => {
           return await Comment.findOneAndDelete({ _id: commentId });
         },

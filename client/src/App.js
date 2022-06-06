@@ -14,6 +14,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/Home'
 import Search from './pages/Search'
+import Park from './pages/Park'
 import ContactUs from'./pages/Contact'
 
 
@@ -62,6 +63,10 @@ function App() {
                 path="/search" 
                 element={<Search />}
               />
+              <Route
+                path = "/park/:parkCode"
+                element={<Park />}
+                />
               <Route
               path="/contact"
               element={<ContactUs />}
