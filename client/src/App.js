@@ -14,6 +14,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/Home'
 import Search from './pages/Search'
+import ContactUs from'./pages/Contact'
 
 
 const httpLink = createHttpLink({
@@ -60,6 +61,10 @@ function App() {
                <Route 
                 path="/search" 
                 element={<Search />}
+              />
+              <Route
+              path="/contact"
+              element={<ContactUs />}
               />
             </Routes>
           </div>

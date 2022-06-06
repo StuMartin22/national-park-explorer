@@ -1,16 +1,16 @@
 import React from 'react';
-import { Card } from 'react-bootstrap';
+import { Container } from 'react-bootstrap'
 import '../App.scss';
+import AuthorCards from '../components/AuthorCards';
 
 const contactUs = () => { 
     return (
         <>
         <Container>
-        < bradycard />
-        < elizabethcard />
-        < ericcard />
-        < stucard />
+        <AuthorCards/>
         </Container>
         </>
   )
   };
+
+  export default contactUs;
