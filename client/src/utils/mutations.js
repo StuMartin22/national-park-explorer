@@ -26,8 +26,8 @@ export const ADD_USER = gql`
 // `;
 
 export const ADD_COMMENT = gql`
-  mutation addComment($commentText: String!, $parkCode: String!) {
-    addComment(commentText: $commentText, parkCode: $parkCode) {
+  mutation addComment($commentText: String!, $parkCode: String!, $commentAuthor: String!) {
+    addComment(commentText: $commentText, parkCode: $parkCode, commentAuthor: $commentAuthor) {
       _id
       commentText
       commentAuthor

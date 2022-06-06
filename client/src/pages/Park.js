@@ -36,9 +36,9 @@ const Park = () => {
     const {loading, data} = useQuery(QUERY_PARK_COMMENTS, {
         variables: {parkCode: parkCode}
     });
-
-    const parkComments = data?.parkComments || [];
-
+    console.log(data);
+    const parkComments = data?.comments || [];
+    console.log(parkComments);
     // const handleChange = (event) => {
     //     const { name, value } = event.target;
     
