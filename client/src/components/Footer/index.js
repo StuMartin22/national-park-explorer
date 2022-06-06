@@ -18,21 +18,26 @@ const Footer = () => {
                   <Nav className="">
                     <Nav.Link href="/">Home</Nav.Link>
                     <Nav.Link href="/search">Search</Nav.Link>
+                    <Nav.Link href="/contact">Contact</Nav.Link>
                     <Nav.Link onClick={logout}>Logout</Nav.Link>
                   </Nav>
+                  <Nav.Link>
+                    Contact us!
+                  </Nav.Link>
                 </Navbar.Collapse>
               </Container>
             </Navbar>
             </>
           ) : (
             <>
-              <Navbar className = "footer container justify-content-end" bg="light" expand="sm">
+              <Navbar className = "footer justify-content-end" bg="light" expand="sm">
                 <Container>
                   <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
                     <Nav className="">
                       <Nav.Link href="/">Home</Nav.Link>
                       <Nav.Link href="#top">Back to Top</Nav.Link>
                       <Nav.Link href="/login">Login</Nav.Link>
+                      <Nav.Link href="/contact">Contact</Nav.Link>
                       <Nav.Link href="/signup">Sign-Up</Nav.Link>
                     </Nav>
                   </Navbar.Collapse>

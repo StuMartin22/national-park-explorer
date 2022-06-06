@@ -1,6 +1,6 @@
 $theme-colors: (
 "primary": #09445D,
-"secondary": #89B6A5,
+"secondary": #6A814F,
 "success": #456535,
 "info": #89B6A5,
 "warning": #EF8339,
@@ -29,25 +29,57 @@ brown: #9C6A40
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
+.mainBody{
+  background-color: #6A814F;
+  min-height: 100vh;
+}
+
 .cardHome{
   background-color: #CBB694;
   margin-top: 0.5REM;
   border-radius: 2rem;
-  border: 0.5rem solid #09445D;
+  border: 0.5rem solid black;
+}
+
+.cardTitle{
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+.cardText{
+  font-size: 1.2rem;
+  color: black;
 }
 
 .navHome{
     background-color: #456535 !important;
     border-radius: 1.5rem;
-    min-width: 95vh;
     border: .25rem solid black;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+}
+
+.topLink{
+  text-decoration: none;
+}
+
+.topThing{
+  background-color: #CBB694;
+  margin: 0%;
 }
 
 .footer{
   background-color: #456535 !important;
   margin-top: 0.5rem;
-  border-radius: 2rem;
-  border: 0.25rem solid black
+  border-radius: 1.5rem;
+  border: 0.25rem solid black;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
 }
 
 .btn btn-block btn-info{
@@ -55,8 +87,8 @@ brown: #9C6A40
 }
 
 .headerPara{
-font-size: '1.75rem';
-font-weight: '700';
+font-size: 1.75rem;
+font-weight: 700;
 background-color: #CBB694;
 }
 
@@ -64,6 +96,15 @@ header{
   background-color: #CBB694;
   border-radius: 2rem;
   min-width: 95vw;
-  margin-top: 1vh;
+  // margin-top: 1vh;
+  position: relative;
+  top: 0.2rem;
+
   border: 0.5rem solid black;
+}
+
+.homeButton{
+  border: 0.2rem solid black;
+  font-weight: bold;
+  font-size: 1.1rem;
 }

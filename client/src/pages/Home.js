@@ -1,9 +1,5 @@
 import { Button, Navbar, Nav, Card, Container } from 'react-bootstrap';
-// import CardHeader from 'react-bootstrap/esm/CardHeader';
 import '../App.scss';
-// const time= date.format;
-// const date = require('date-and-time');
- 
 
 const HomePage = () => { 
   return (
@@ -11,13 +7,13 @@ const HomePage = () => {
   <Container className = "homeBody">
       <Card className="cardHome">
           <Card.Body>
-            <Card.Title>
+            <Card.Title className ="cardTitle">
                 Hello There
             </Card.Title>
-            <Card.Text>
+            <Card.Text className="cardText">
                 Welcome to National Parks Explorer! Your next adventure awaits.
             </Card.Text>
-            <Button variant="primary" href="/signup">Go somewhere</Button>
+            <Button className = "homeButton" variant="primary" href="/signup">Go somewhere</Button>
           </Card.Body>
       </Card>
     </Container>
