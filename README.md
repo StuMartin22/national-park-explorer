@@ -9,7 +9,7 @@
   [License](#license)<br>
   [Questions](#questions)<br>
 
-![Screen Shot 2022-05-05 at 1 33 09 PM](./public/images/National_parks_screenshot.JPG)
+![Screen Shot 2022-05-05 at 1 33 09 PM](./client/public/images/National_parks_screenshot.JPG/)
 
   # Description
  Elevator pitch: a one minute description of your application
