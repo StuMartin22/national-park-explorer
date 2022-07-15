@@ -6,7 +6,7 @@ const { signToken } = require('../utils/auth');
 const resolvers = {
     Query: {
         users: async () => {
-           return await User.find();
+           return await User.find().populate('comments');
         },
         user: async (parent, { userId }) => {
             return User.findOne({ _id: userId });
@@ -17,7 +17,13 @@ const resolvers = {
         },
         comment: async (parent, { commentId }) => {
           return Comment.findOne({ _id: commentId });
-        }
+        },
+        me: async (parent, args, context) => {
+          if (context.user) {
+            return User.findOne({ _id: context.user._id }).populate('comments');
+          }
+          throw new AuthenticationError('You need to be logged in!');
+        },
     },
 
     Mutation: {
@@ -43,30 +49,38 @@ const resolvers = {
             const token = signToken(user);
             return { token, user };
         },
+
         removeUser: async (parent, args, context) => {
             if (context.user) {
               return User.findOneAndDelete({ _id: context.user._id });
             }
             throw new AuthenticationError('You need to be logged in!');
           },
-        addComment: async (parent, { commentText, commentAuthor, parkCode }) => {
+        
+        addComment: async (parent, { commentText, parkCode, commentAuthor }, context) => {
           const comment = await Comment.create({ commentText, commentAuthor, parkCode });
 
           await User.findOneAndUpdate(
             { username: commentAuthor },
-            { $addToSet: { comments: comment._id }}
+            { $addToSet: { comments: comment._id } }
           );
+
+          return comment;
         },
-        removeComment: async (parent, { commentId }) => {
-          return await Comment.findOneAndDelete({ _id: commentId });
-        },
+
+        
         addRating: async (parent, {commentId, ratingNumber, ratingAuthor}) => {
-          Comment.findOneAndUpdate(
+          return Comment.findOneAndUpdate(
             { _id: commentId },
             { $addToSet: { ratings: { ratingNumber, ratingAuthor }}},
             { new: true }
-          )
-        },
+            )
+          },
+          
+        removeComment: async (parent, { commentId }) => {
+            return await Comment.findOneAndDelete({ _id: commentId });
+          },
+
         removeRating: async (parent, { commentId, ratingId }) => {
           return await Comment.findOneAndUpdate(
             { _id: commentId },

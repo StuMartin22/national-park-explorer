@@ -1,5 +1,5 @@
 const { Schema, model } = require('mongoose');
-// const dateFormat = require('../utils/dateFormat');
+const dateFormat = require('../utils/dateFormat');
 
 const commentSchema = new Schema({
   commentText: {
@@ -7,23 +7,23 @@ const commentSchema = new Schema({
     required: 'Please leave a comment with text!',
     minlength: 1,
     maxlength: 280,
-    trim: true,
+    trim: true
   },
   // username of author
   commentAuthor: {
     type: String,
     required: true,
-    trim: true,
+    trim: true
   },
   // from API, code of park being commented on
   parkCode: {
     type: String,
-    required: true,
+    required: true
   },
   createdAt: {
     type: Date,
     default: Date.now,
-    // get: (timestamp) => dateFormat(timestamp),
+    get: (timestamp) => dateFormat(timestamp)
   },
   ratings: [
         {
@@ -35,7 +35,7 @@ const commentSchema = new Schema({
         // session username
         ratingAuthor: {
             type: String,
-            unique: true
+            required: true
         }
     }
   ]

@@ -9,7 +9,7 @@
   [License](#license)<br>
   [Questions](#questions)<br>
 
-![Screen Shot 2022-05-05 at 1 33 09 PM](https://user-images.githubusercontent.com/97856843/166995258-40923859-27d5-47c1-abf2-ee13fb7a0ca5.png)
+![Screen Shot 2022-05-05 at 1 33 09 PM](./public/images/National_parks_screenshot.JPG)
 
   # Description
  Elevator pitch: a one minute description of your application
@@ -30,7 +30,7 @@ Brady: Project Manager, worked on backend functionality, setting up apollo clien
 
 Stuart: Worked on react / bootstrap implementation - debugging - team assistance - redirection / endpoints.
 
-Eric: 
+Eric: worked on backend functionality, setting up apollo client on backend to view schemas, API pull on front end for park data.
 
 Elizabeth: Worked on front end along with Stuart, created the pages in the client side, general layout, and wrote this readme.
 
