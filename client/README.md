@@ -22,7 +22,7 @@ We wanted to cater to those looking for a national park to go to on their next a
 
 Process: What were the technologies used? How were tasks and roles broken down and assigned? What challenges did you encounter? What were your successes?
 
-Technologies we used included react, javascript, html, css, bootstrap, national parks api, gql, sql, sequelize, and heroku.
+Technologies we used included react, javascript, html, css, bootstrap, national parks api, gql, mongo, and heroku.
 
 Roles were broken down as follows:
 
@@ -51,7 +51,7 @@ https://natl-parks-explorer.herokuapp.com/
   # Installation
   To install dependencies use: npm init --y  followed by: npm install 
   # Usage
-  You are welcome to use this project as a online cookbook.
+  You are welcome to use this project as a online national park explorer.
   # Contributing
   If you wish to contribute to this project, please fork the repository first.
   # Tests
