@@ -11,7 +11,7 @@
   [License](#license)<br>
   [Contact](#Contact)<br>
 
-![Screen Shot 2022-05-05 at 1 33 09 PM](./client/public/images/National_parks_screenshot.JPG/)
+![Screen Shot 2022-05-05 at 1 33 09 PM](client/public/images/National_parks_screenshot.JPG)
 
 ## Description
 
